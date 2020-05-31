@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+
+  pgsql:
+    build: ./pgsql
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pgsql/.data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
