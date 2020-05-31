@@ -1,5 +1,5 @@
 .PHONY: build
 build:
-	go build -v ./cmd/todo
+	go build -v ./cmd/godo
 
 .DEFAULT_GOAL := build
